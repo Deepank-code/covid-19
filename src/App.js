@@ -5,7 +5,7 @@ import './App.css';
 import  Infoboxes  from "./Infoboxes"
 // import Map from "./Map";
 import Table from "./Table";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 function App() {
 const [countries, setCountry]=useState([]);
@@ -86,12 +86,14 @@ console.log(countryinfo);
      
     </div>
     <div className="app_stats">
-    <Infoboxes className="active" heading=" Active cases" cases={countryinfo.todayCases} total={countryinfo.cases}/>
-    <Infoboxes  className="recov" heading=" Recoveries "    cases={countryinfo.todayRecovered} total={countryinfo.recovered}/>
+    <Infoboxes className="active" heading="Active cases" cases={countryinfo.todayCases} total={countryinfo.cases}/>
+    <Infoboxes  className="recov" heading=" Recoveries stats "    cases={countryinfo.todayRecovered} total={countryinfo.recovered}/>
     <Infoboxes className="death" heading="Death stats" cases={countryinfo.todayDeaths} total={countryinfo.deaths}/>
-  </div> 
-  {/* <Map/> */} <Footer className="footer"/>
+   {/* <Footer className="footer"/> */}
   </div>
+  
+  </div> 
+  {/* <Map/> */}
   <Card className="app_right">
 <CardContent >
   <h2 className="tableh"> Live cases by country</h2>
